@@ -33,7 +33,8 @@ public class ProfileActivity extends FragmentActivity implements
 		final ActionBar actionBar = getActionBar();
 		actionBar.setDisplayShowTitleEnabled(false);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		
 		// Set up the dropdown list navigation in the action bar.
 		actionBar.setListNavigationCallbacks(
 		// Specify a SpinnerAdapter to populate the dropdown list.
@@ -43,6 +44,7 @@ public class ProfileActivity extends FragmentActivity implements
 								getString(R.string.section_profile),
 								getString(R.string.section_team),
 								getString(R.string.section_meeting), }), this);
+	
 	}
 
 	@Override
@@ -72,9 +74,21 @@ public class ProfileActivity extends FragmentActivity implements
 	public boolean onNavigationItemSelected(int position, long id) {
 		// When the given dropdown item is selected, show its contents in the
 		// container view.
-		Fragment fragment = new DummySectionFragment();
+		Fragment fragment;
 		Bundle args = new Bundle();
-		args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+		if(position == 0){
+			fragment = new ProfileFragment();
+			args.putInt(ProfileFragment.ARG_SECTION_NUMBER, position);
+		}
+		else if(position == 1){
+			fragment = new TeamFragment();
+			args.putInt(TeamFragment.ARG_SECTION_NUMBER, position);
+		}
+		else{
+			fragment = new MeetingFragment();
+			args.putInt(MeetingFragment.ARG_SECTION_NUMBER, position);
+		}
+		
 		fragment.setArguments(args);
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.container, fragment).commit();
