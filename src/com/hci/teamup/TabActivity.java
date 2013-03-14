@@ -19,7 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
+public class TabActivity extends FragmentActivity implements ActionBar.TabListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -39,7 +39,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_tabs);
 
         // Set up the action bar.
         final ActionBar actionBar = getActionBar();
@@ -115,7 +115,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             // below) with the page number as its lone argument.
             Fragment fragment = new DummySectionFragment();
             Bundle args = new Bundle();
-            args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+            args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 5);
             fragment.setArguments(args);
             return fragment;
         }
@@ -131,11 +131,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return getString(R.string.title_section1).toUpperCase(l);
+                    return getString(R.string.section_profile).toUpperCase(l);
                 case 1:
-                    return getString(R.string.title_section2).toUpperCase(l);
+                    return getString(R.string.section_team).toUpperCase(l);
                 case 2:
-                    return getString(R.string.title_section3).toUpperCase(l);
+                    return getString(R.string.section_meeting).toUpperCase(l);
             }
             return null;
         }
