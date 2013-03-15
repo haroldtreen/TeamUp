@@ -1,5 +1,6 @@
 package com.hci.teamup;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,11 +21,11 @@ public class MeetingFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_profile_dummy,
+		
+		View rootView = inflater.inflate(R.layout.fragment_meeting,
 				container, false);
-		TextView dummyTextView = (TextView) rootView
-				.findViewById(R.id.section_label);
-		dummyTextView.setText("Meeting!");
+		
+		
 		return rootView;
 	}
 }
