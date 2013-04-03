@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    
+    <string-array name="task_list">
+        <item>Task 1</item>
+        <item>Task 2</item>
+        <item>Task 3</item>
+        <item>Task 4</item>
+        <item>+ New Task</item>
+	</string-array>
+
+	<string-array name="default_list">
+        <item>Notification 1</item>
+        <item>Notification 2</item>
+        <item>Notification 3</item>
+        <item>Notification 4</item>
+        <item>Notification 5</item>
+        <item>Notification 6</item>
+        <item>Notification 7</item>
+        <item>Notification 8</item>
+        <item>Notification 9</item>
+	</string-array>
+
+</resources>

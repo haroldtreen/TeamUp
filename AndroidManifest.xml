@@ -31,6 +31,9 @@
             android:name="com.hci.teamup.ProfileActivity"
             android:label="@string/title_activity_profile" >
         </activity>
+        <activity android:name="com.hci.teamup.TabActivity"
+            android:label="New Meeting">
+        </activity>
     </application>
 
 </manifest>

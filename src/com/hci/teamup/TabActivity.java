@@ -113,10 +113,22 @@ public class TabActivity extends FragmentActivity implements ActionBar.TabListen
             // getItem is called to instantiate the fragment for the given page.
             // Return a DummySectionFragment (defined as a static inner class
             // below) with the page number as its lone argument.
-            Fragment fragment = new DummySectionFragment();
+        	
+            /*Fragment fragment = new DummySectionFragment();
             Bundle args = new Bundle();
             args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 5);
             fragment.setArguments(args);
+            return fragment;*/
+            
+        	Fragment fragment;
+        	
+        	if(position==0)
+        		fragment = new TimeFragment();
+        	else if(position==1)
+        		fragment = new TasksFragment();
+        	else
+        		fragment = new AttendeesFragment();
+        	
             return fragment;
         }
 
@@ -131,11 +143,11 @@ public class TabActivity extends FragmentActivity implements ActionBar.TabListen
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return getString(R.string.section_profile).toUpperCase(l);
+                    return getString(R.string.section_time).toUpperCase(l);
                 case 1:
-                    return getString(R.string.section_team).toUpperCase(l);
+                    return getString(R.string.section_tasks).toUpperCase(l);
                 case 2:
-                    return getString(R.string.section_meeting).toUpperCase(l);
+                    return getString(R.string.section_attendees).toUpperCase(l);
             }
             return null;
         }

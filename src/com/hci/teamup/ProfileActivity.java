@@ -1,6 +1,9 @@
 package com.hci.teamup;
 
+
+
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
@@ -94,6 +97,47 @@ public class ProfileActivity extends FragmentActivity implements
 				.replace(R.id.container, fragment).commit();
 		return true;
 	}
+	
+	@Override
+    protected void onStart() {
+        super.onStart();
+        
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+       
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        
+    }
+	
+	public void startTabActivity(View v) {
+        Intent intent = new Intent(ProfileActivity.this, TabActivity.class);
+        startActivity(intent);
+    }
 
 
 }
