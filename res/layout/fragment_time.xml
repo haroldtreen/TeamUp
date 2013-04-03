@@ -40,36 +40,5 @@
 	        android:text="Sunday March 17, 7:00pm"
         android:onClick="onRadioButtonClicked"/>
 	</RadioGroup>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-    	android:orientation="horizontal"
-    	android:layout_weight="2"
-    	android:gravity="bottom" >
-    	
-        <Button
-            android:id="@+id/new_meeting"
-            android:text="Schedule"
-            android:layout_weight="1"
-            android:layout_width="0dip"
-            android:layout_height="50dip"
-            android:onClick="startTabActivity"
-          
-            
-         />
-        <Button
-            android:id="@+id/toggle_view"
-            android:text="Cancel"
-            android:layout_weight="1"
-            android:layout_width="0dip"
-            android:layout_height="50dip"
-            
-         />
-        
-     </LinearLayout>
-    
-    
-    
-
+     
 </LinearLayout>

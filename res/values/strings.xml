@@ -15,6 +15,8 @@
     <string name="meetings_tab_str">Meetings</string>
     <string name="profile_name">Name:  Steve Jobs</string>
     <string name="profile_notifications">Notifications</string>
+    <string name="schedule_btn">Schedule</string>
+    <string name="cancel_meeting">Cancel</string>
     
 
 </resources>
